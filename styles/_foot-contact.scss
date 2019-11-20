@@ -1,0 +1,84 @@
+@mixin blog-before {
+    content: " ";
+    position: absolute;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+    left: 0;
+    top: 0;
+}
+
+
+.foot {
+    
+    & .foot_contact {
+    background-image: url(../images/foot-bg.jpg);
+     padding: 35px 148px;
+    height: 255px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .foot-blog {
+      width: 228px;
+
+
+    & h4 {
+      position: relative;
+      color: #505050;
+      font-size: 18px;
+      padding: 60px 0 19px;
+      margin: 0 0 20px 0;
+
+      &::before{
+          content: " ";
+          position: absolute;
+          background-color: #cccccc;
+          height: 1px;
+          width: 228px;
+          bottom: 0;
+          left: 0;
+      }
+    }
+
+    & p{
+        font-size: 12px;
+        position: relative;
+        color: #b2b2b2;
+        padding-left: 35px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        &.contact-address::before{
+            @include blog-before;
+            background-image: url(../images/adress.png);
+        }
+
+        &.contact-number::before{
+            @include blog-before;
+            background-image: url(../images/fa-phone.png);
+        }
+
+        &.contact-email::before{
+            @include blog-before;
+            background-image: url(../images/fa-email.png);
+        }
+    }
+
+    & ul{
+        list-style: none;
+        padding: 0;
+
+        & li{
+
+            & a{
+                display: block;
+                padding: 5px 0;
+                text-decoration: none;
+                color:  #b2b2b2;
+                font-size: 12px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+        }
+    }
+  }
+}

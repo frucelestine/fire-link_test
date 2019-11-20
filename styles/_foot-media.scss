@@ -1,0 +1,62 @@
+@mixin media-before {
+  content: " ";
+  position: absolute;
+  height: 23px;
+  width: 23px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.foot_media {
+  background-color: #f9fbfc;
+  @include page-padding;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & .copy-right {
+    font-size: 11px;
+    color: #b2b2b2;
+  }
+
+  & .media-items {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 75px;
+
+    & .media-list {
+
+        
+      & a {
+        display: block;
+        height: 23px;
+        width: 23px;
+        border-radius: 50%;
+        background-color: #444444;
+        position: relative;
+        transition: background-color 0.5s;
+
+        &.face-book::before {
+          @include media-before;
+          background-image: url(../images/fa-facebook.png);
+        }
+
+        &.twitter::before {
+          @include media-before;
+          background-image: url(../images/fa-twitter.png);
+        }
+
+        &.google::before {
+          @include media-before;
+          background-image: url(../images/fa-google.png);
+        }
+
+        &:hover{
+            background-color: #455aa6;
+        }
+      }
+    }
+  }
+}
