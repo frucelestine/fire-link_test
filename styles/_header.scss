@@ -1,0 +1,212 @@
+.header {
+  color: #737474;
+
+  & .intro {
+     
+    @include page-padding;
+    background: url("../images/top-bar.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 46px;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 36px;
+
+    & .call_us {
+      
+      margin-top: 20px;
+      font-size: 11px;
+      padding-left: 25px;
+      position: relative;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+      &:before {
+        
+        content: " ";
+        position: absolute;
+        background-image: url("../images/fa-phone.png");
+        background-repeat: no-repeat;
+        height: 15px;
+        width: 15px;
+        left: 0;
+      }
+    }
+
+    & .welcome {
+      margin-top: 20px;
+      font-size: 12px;
+
+      & a {
+        text-decoration: none;
+        color: #83c8d1;
+      }
+    }
+
+    & .language_curency {
+      
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      width: 217px;
+
+      & ._items {
+        
+        background-color: #e6e9ed;
+        list-style: none;
+        text-align: center;
+        line-height: 38px;
+        margin-top: 10px;
+        margin-left: 1px;
+        transition: background-color 0.5s, font-weight 0.5s;
+
+        &:nth-child(4) {
+          
+          margin-left: 26px;
+        }
+
+        &:hover {
+          background-color: #83c8d1;
+          margin-top: 0;
+          line-height: 52px;
+          font-weight: bold;
+        }
+
+        & .item_link {
+          
+          display: block;
+          text-decoration: none;
+          color: #737474;
+          height: 30px;
+        }
+      }
+
+      & .language {
+        
+        width: 37px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 11px;
+      }
+
+      & .currency {
+        
+        width: 27px;
+      }
+    }
+  }
+
+  & .breeze {
+    // display: none !important;
+    @include page-padding;
+    display: flex;
+    margin-bottom: 60px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    & .logo {
+      
+      width: 134px;
+      font-size: 11px;
+      text-align: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    & .breeze_form {
+      
+      position: relative;
+      width: 230px;
+      height: 35px;
+      box-sizing: border-box;
+
+      & input {
+        
+        outline: none;
+        width: 89%;
+        height: 100%;
+        padding-left: 12px;
+        border: 1px solid #cccccc;
+        border-radius: 2px;
+        border-right: 0;
+      }
+
+      & button {
+        
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+        height: inherit;
+        background-color: white;
+        border: 1px solid #cccccc;
+        border-radius: 2px;
+        border-left: 0;
+      }
+    }
+
+    & .breeze_nav {
+      
+      max-width: 400px;
+      position: relative;
+
+      & .nav_list {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+
+        & .nav_list-items {
+          list-style: none;
+          transition: background-color 0.5s;
+
+          & .nav_items-link {
+            border-radius: 3px;
+            display: block;
+            padding: 10px 11px;
+            text-decoration: none;
+            color: #737474;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 12px;
+          }
+
+          &.mid-line::before{
+              content: " ";
+              position: absolute;
+              height: 15px;
+              width: 1px;
+              top: 50%;
+              transform: translateY(-50%);
+              background-color: #e0e0e0;
+          }
+
+          &:hover {
+            background-color: #83c8d1;
+          }
+        }
+
+        & .item-active {
+          position: relative;
+          padding-left: 30px;
+          background-color: #cccccc;
+          transition: background-image 0.5s;
+          &::before {
+            content: " ";
+            position: absolute;
+            width: 16px;
+            height: 15px;
+            left: 5px;
+            top: 15px;
+            background-image: url("../images/black-cart.png");
+          }
+
+          &:hover {
+            &::before {
+              background-image: url("../images/fa-shop.png");
+            }
+
+            & .cart_blog {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@mixin page-padding {
+  padding: 0 148px;
+}
+
+@mixin before-img {
+  content: " ";
+  border: 1px solid #cccccc;
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  background-repeat: no-repeat;
+}
+body {
+  margin: 0;
+  font-family: "Bitter", serif;
+}
+
+@import "header";
+@import "main-block";
+@import "cart-block";
+@import "main-nav";
+@import "about-sec";
+@import "foot-contact";
+@import "foot-media";
+@import "media-querry";
+@import "totop-btn"
+
+
+
